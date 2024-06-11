@@ -37,10 +37,10 @@ func NewRatioConversion(from, to Unit, ratio float64) {
 	ratioStr := fmt.Sprintf("%.62f", ratio)
 	NewConversionFromFn(from, to, func(x float64) float64 {
 		return x * ratio
-	}, "x * " + ratioStr)
+	}, "x * "+ratioStr)
 	NewConversionFromFn(to, from, func(x float64) float64 {
 		return x / ratio
-	}, "x / " + ratioStr)
+	}, "x / "+ratioStr)
 }
 
 // NewConversion registers a new conversion formula from one Unit to another
